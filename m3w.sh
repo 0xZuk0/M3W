@@ -67,3 +67,5 @@ do
 done
 
 
+
+ps -aux | grep ^root | awk '{ $1=$2=$3=$4=$5=$6=$7=$8=$9=$10=""; print $0  }' | sed 's/^[ \t]*//;s/[ \t]*$//' | sed -n '/^\//p'
